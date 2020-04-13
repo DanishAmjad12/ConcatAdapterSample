@@ -1,7 +1,8 @@
 package com.sample.mergeadapter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.MergeAdapter
 import com.sample.mergeadapter.adapter.FooterAdapter
@@ -24,6 +25,17 @@ class MainActivity : AppCompatActivity() {
 
         setDataInRecyclerView()
 
+        // Removing items on a single adapter
+        Handler().postDelayed({
+            userAdapter.removeItem(3)
+        }, 1000)
+
+        Handler().postDelayed({
+            userAdapter.removeItem(5)
+        }, 2000)
+        Handler().postDelayed({
+            userAdapter.removeItem(7)
+        }, 3000)
     }
 
     private fun setDataInRecyclerView() {
@@ -32,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         userAdapter = UserAdapter(DataSource.getUser())
         footerAdapter = FooterAdapter(DataSource.getFooter())
         myDetailAdapter = MyDetailAdapter(userDetail)
-        adapter = MergeAdapter(myDetailAdapter,  userAdapter,footerAdapter)
+        adapter = MergeAdapter(myDetailAdapter, userAdapter, footerAdapter)
         recycler.adapter = adapter
     }
 }
