@@ -19,7 +19,7 @@ class FooterAdapter(
             Glide.with(itemView.imageViewFooter.context)
                 .load(footer.footerImage)
                 .into(itemView.imageViewFooter)
-            
+
         }
     }
 

@@ -25,6 +25,11 @@ class UserAdapter(
         }
     }
 
+    fun removeItem(position: Int) {
+        users.removeAt(position)
+        this.notifyItemRemoved(position)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         DataViewHolder(
             LayoutInflater.from(parent.context).inflate(
