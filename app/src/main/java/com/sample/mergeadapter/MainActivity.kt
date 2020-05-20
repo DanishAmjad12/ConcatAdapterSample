@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         setDataInRecyclerView()
 
-        // Removing items on a single adapter
+       /* // Removing items on a single adapter
         Handler().postDelayed({
             userAdapter.removeItem(3)
         }, 1000)
@@ -35,16 +35,21 @@ class MainActivity : AppCompatActivity() {
         }, 2000)
         Handler().postDelayed({
             userAdapter.removeItem(7)
-        }, 3000)
+        }, 3000)*/
     }
 
     private fun setDataInRecyclerView() {
         val userDetail = MyDetail(1, "Danish Amjad", "Software Engineer Android Developer")
         recycler.layoutManager = LinearLayoutManager(this)
-        userAdapter = UserAdapter(DataSource.getUser())
+        userAdapter = UserAdapter(this,DataSource.getUser())
         footerAdapter = FooterAdapter(DataSource.getFooter())
         myDetailAdapter = MyDetailAdapter(userDetail)
         adapter = MergeAdapter(myDetailAdapter, userAdapter, footerAdapter)
         recycler.adapter = adapter
+    }
+
+    fun removeItem(position: Int) {
+        userAdapter.users.removeAt(position)
+        userAdapter.notifyItemRemoved(position)
     }
 }
