@@ -5,6 +5,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.MergeAdapter
+import androidx.recyclerview.widget.SimpleItemAnimator
 import com.sample.mergeadapter.adapter.FooterAdapter
 import com.sample.mergeadapter.adapter.MyDetailAdapter
 import com.sample.mergeadapter.adapter.UserAdapter
@@ -51,5 +52,6 @@ class MainActivity : AppCompatActivity() {
     fun removeItem(position: Int) {
         userAdapter.users.removeAt(position)
         userAdapter.notifyItemRemoved(position)
+        userAdapter.notifyItemRangeChanged(position,userAdapter.users.size)
     }
 }
