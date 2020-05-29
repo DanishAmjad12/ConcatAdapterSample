@@ -19,7 +19,7 @@ In this Project I have a three sectoins.
 # Steps to Implement this
 
 Add a dependency first for recyclerview
-```
+``` Java
 implementation "androidx.recyclerview:recyclerview:1.2.0-alpha02"
 ```
 
@@ -31,7 +31,7 @@ implementation "androidx.recyclerview:recyclerview:1.2.0-alpha02"
 
 # My Profile Section Adapter
 
-```
+``` Kotlin
 class MyDetailAdapter(
     private val myDetail: MyDetail
 ) : RecyclerView.Adapter<MyDetailAdapter.DataViewHolder>() {
@@ -61,7 +61,7 @@ class MyDetailAdapter(
 ```
 # User Adapter
 
-```
+``` Kotlin
 class UserAdapter(
     private val users: ArrayList<User>
 ) : RecyclerView.Adapter<UserAdapter.DataViewHolder>() {
@@ -96,7 +96,7 @@ class UserAdapter(
 
 # Banner Adapter
 
-```
+``` Kotlin
 class FooterAdapter(
     private val footer: Footer
 ) : RecyclerView.Adapter<FooterAdapter.DataViewHolder>() {
@@ -128,7 +128,7 @@ class FooterAdapter(
 ```
 # Main Activity class
 
-```
+``` Kotlin
 class MainActivity : AppCompatActivity() {
 
     lateinit var adapter: MergeAdapter
@@ -158,7 +158,7 @@ class MainActivity : AppCompatActivity() {
 
 # For Image Downloading I Used Glide
 
-```
+``` Java
 implementation 'com.github.bumptech.glide:glide:4.11.0'
 annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 ```
