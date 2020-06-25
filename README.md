@@ -1,5 +1,5 @@
 # MergeAdapterSample
-Implement multiple views in one recyclerView with MergeAdapter 
+🛠 Implement multiple views in one recyclerView with MergeAdapter 
 
 # Demo
 ![](result.gif)
