@@ -1,4 +1,4 @@
-# MergeAdapterSample
+# MergeAdapterSample 
 🛠 Implement multiple views in one recyclerView with MergeAdapter 
 
 # Demo
@@ -15,6 +15,7 @@ In this Project I have a three sectoins.
 # Note
 
 * Currently the library is in the aplha channel
+* RecyclerView MergeAdapter has been renamed to ConcatAdapter in 1.2.0-alpha04 to make it more clear.
 
 # Steps to Implement this
 
